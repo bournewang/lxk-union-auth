@@ -3,6 +3,7 @@
 namespace Lxk\Controllers;
 
 use InfyOm\Generator\Utils\ResponseUtil;
+use Illuminate\Routing\Controller;
 use Response;
 
 /**

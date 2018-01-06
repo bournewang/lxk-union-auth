@@ -71,6 +71,7 @@ class LxkAuth extends ServiceProvider
 
   static public function routes()
   {
-      
+      Route::get('perms', '\Lxk\Controllers\PermsAPIController@index')->name('lxk.perms');
+
   }
 }

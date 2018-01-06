@@ -10,12 +10,20 @@ use Lxk\Exceptions\ForbiddenException;
 use Exception;
 use Lxk\LxkAuth;
 
-class LxkAuthCheck
+class LxkAuthenticate
 {
     protected $except = [
         //
         'root', 'logout'
     ];
+    private $login_url; // 登录网址
+    private $perms_url;
+
+    public function __construct()
+    {
+        $this->login_url = env('LXK_AUTH_SERVER').'/login';
+        $this->perms_url = env('LXK_AUTH_SERVER').'/api/v2/perms/{token}?service_code='.env('SERVICE_CODE');
+    }
     /**
      * Handle an incoming request.
      *
@@ -45,7 +53,7 @@ class LxkAuthCheck
           if ($token = $request->input('access_token', null)){
             \Log::debug("get token from url");
             // fetch user perms
-            if (!$perms_url = config('lxk.services.auth.perms_url', null)){
+            if (!$perms_url = $this->perms_url){
               throw new Exception('Auth service not configured correctly.');
               return;
             }
@@ -59,11 +67,10 @@ class LxkAuthCheck
             LxkAuth::perms($perms->perms);
             // dd("save user in session");
           }else{
-            if (!$login_url = config('lxk.services.auth.login_url', null)){
+            if (!$login_url = $this->login_url){
               throw new Exception('Auth service not configured correctly.');
               return;
             }
-
             return redirect($login_url . '?from='. $request->url());
           }
         }
