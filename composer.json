@@ -15,6 +15,7 @@
     "autoload": {
         "psr-4": {
             "Lxk\\": "src/lxk",
+            "Lxk\\Controllers\\": "src/lxk/Controllers",
             "Lxk\\Middleware\\": "src/lxk/Middleware",
             "Lxk\\Exceptions\\": "src/lxk/Exceptions"
         }

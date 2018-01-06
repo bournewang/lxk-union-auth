@@ -2,7 +2,7 @@
 
 namespace Lxk;
 use Illuminate\Support\ServiceProvider;
-use Route;
+use Illuminate\Support\Facades\Route;
 
 class LxkAuth extends ServiceProvider
 {
@@ -67,5 +67,10 @@ class LxkAuth extends ServiceProvider
     session([self::USER  => null]);
     session([self::PERMS => null]);
     session([self::TOKEN => null]);
+  }
+
+  static public function routes()
+  {
+      
   }
 }
