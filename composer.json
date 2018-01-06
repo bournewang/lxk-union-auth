@@ -12,5 +12,12 @@
             "email": "wangxiaopei@landawang.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Lxk\\LxkAuth\\": "src/lxk/LxkAuth",
+            "Lxk\\Middleware\\LxkAuthCheck": "src/lxk/Middleware/LxkAuthCheck",
+            "Lxk\\Exceptions\\ForbiddenException": "src/lxk/Exceptions/ForbiddenException"
+        }
+    },
     "minimum-stability": "stable"
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Lxk\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client as HttpClient;
-use App\Exceptions\ForbiddenException;
+use Lxk\Exceptions\ForbiddenException;
 use Exception;
-use App\LxkAuth;
+use Lxk\LxkAuth;
 
 class LxkAuthCheck
 {
