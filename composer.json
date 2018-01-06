@@ -14,9 +14,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Lxk\\LxkAuth\\": "src/lxk/LxkAuth",
-            "Lxk\\Middleware\\LxkAuthCheck": "src/lxk/Middleware/LxkAuthCheck",
-            "Lxk\\Exceptions\\ForbiddenException": "src/lxk/Exceptions/ForbiddenException"
+            "Lxk\\": "src/lxk",
+            "Lxk\\Middleware\\": "src/lxk/Middleware",
+            "Lxk\\Exceptions\\": "src/lxk/Exceptions"
         }
     },
     "minimum-stability": "stable"
