@@ -1,0 +1,16 @@
+{
+    "name": "lxk/auth",
+    "description": "lxk auth composer for services",
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "license": "GPL2.0",
+    "authors": [
+        {
+            "name": "王小培",
+            "email": "wangxiaopei@landawang.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
